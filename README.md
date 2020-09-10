@@ -24,11 +24,16 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Descripción
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest](https://github.com/nestjs/nest) Es un framework de NOdeJS para crear aplicaciones del
+lado del servidor eficientes, confiables y escalables. Es extensible, versátil y progresivo.
 
-## Installation
+Permite una arquitectura de aplicación lista para usar que permite a los desarrolladores y equipos
+crear aplicaciones altamente probables, escalables, poco acopladas y fáciles de matener.
+Arquitectura inspirada en Angular.
+
+## Instalación
 
 ```bash
 $ npm install
@@ -40,7 +45,7 @@ $ Desplegar Zookeeper y Kafka en Local
 $ Instalar mongoDB
 ```
 
-## Running the app
+## Ejecutar aplicación
 
 ```bash
 # development
@@ -66,16 +71,16 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Soporte
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
+## Mantente en contacto
 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+## Licencia
 
-Nest is [MIT licensed](LICENSE).
+Nest tiene [Licencia MIT](LICENSE).
