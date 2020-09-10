@@ -1,0 +1,34 @@
+1. ### DESCARGA ###
+Instalar JAVA JDK > 1.8
+Descargar Kafka y ponerlo en C:
+Descargar Zookeeper y ponerlo en C:
+
+2. ### ZOOKEEPER ###
+Agregar variables de entorno para JAVA y ZOOKEEPER
+Editar zoo_sample.cfg por zoo.cfg y dentro dataDir=/tmp/zookeeper to :\zookeeper-<VERSION>\data
+En CMD ejecutar zkserver
+Puerto predeterminado 2181
+
+3. ### KAFKA ###
+Editar archivo server.properties
+Editar línea log.dirs=/tmp/kafka-logs” to “log.dir= C:\kafka_<VERSION>\kafka-logs
+Puerto predeterminado 9092
+En CMD ir a directorio KAFKA y ejecutar .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+4. ### CREAR TOPICS ###
+En CMD ruta C:\kafka_<VERSION>\bin\windows ejecutar
+kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test-kafka
+
+5. ### PRODUCER ###
+En CMD ruta C:\kafka_<VERSION>\bin\windows ejecutar
+kafka-console-producer.bat --broker-list localhost:9092 --topic test-kafka
+
+6. ### CONSUMER ###
+En CMD ruta C:\kafka_<VERSION>\bin\windows ejecutar
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-kafka
+
+### PLUS ###
+Listar topics --> kafka-topics.bat --list --zookeeper localhost:2181
+Describir topic --> kafka-topics.bat --describe --zookeeper localhost:2181 --topic test-kafka
+Leer mensajes desde inicio --> kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test-kafka --from-beginning
+Eliminar topic --> kafka-run-class.bat kafka.admin.TopicCommand --delete --topic test-kafka --zookeeper localhost:2181
